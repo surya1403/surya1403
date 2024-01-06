@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="ppp">
+        <h1>Surya.</h1>
+        <div>
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#AboutMe">About Me</a>
+            </li>
+            <li>
+              <a href="#Artikel">Artikel</a>
+            </li>
+            <li>
+              <a href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="gambar" id="home">
+      <img src="./../../vidio-img-audio/me.jpg" alt="me" />
+      <br />
+      <h1>Bergas Surya</h1>
+    </div>
+    <div>
+      <h2 class="judul" id="AboutMe">About Me</h2>
+      <div class="container-aboutme">
+        <p class="aboutme1">
+          Let me introduce myself, my name is Surya, I was born in Mojokerto
+          March 14 2008, I went to school at SMAN 1 KUTOREJO, I am in 10th
+          grade, I am the 2nd of 3 siblings, my hobby is running, I aspire to
+          become a civil servant, nice to meet you Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Iusto a magni dolores rerum, sequi aut
+          eligendi cumque! Atque inventore ratione beatae iusto suscipit neque
+          laborum!
+        </p>
+      </div>
+    </div>
+    <div class="artikel" id="Artikel">
+      <div class="kotak1">
+        <img src="./../../vidio-img-audio/artikel.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+          aspernatur.
+        </p>
+      </div>
+      <div class="kotak1">
+        <img src="./../../vidio-img-audio/artikel2.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+          dolorum.
+        </p>
+      </div>
+    </div>
+    <div class="kontak" id="Contact">
+      <h2>Contact</h2>
+      <form>
+        <div>
+          <label for="nama_lengkap">Nama Lengkap</label>
+          <input
+            type="text"
+            id="nama_lengkap"
+            placeholder="Masukkan nama lengakp"
+          />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="email anda" />
+        </div>
+        <div>
+          <label for="pesan">Pesan</label>
+          <textarea
+            id="pesan"
+            rows="5"
+            style="height: 142px"
+            placeholder="komentar anda"
+          ></textarea>
+        </div>
+        <div>
+          <span>
+            <button class="kirim" type="submit">Kirim</button>
+          </span>
+        </div>
+      </form>
+    </div>
+    <br />
+    <br />
+    <hr />
+    <footer>
+      <div>
+        Copyright &copy; <span id="tahun-sekarang"></span> by MINARSIH TECT
+      </div>
+    </footer>
+    <script>
+      // tahun sekarang
+      const tahunsekarang = document.getElementById("tahun-sekarang");
+      tahunsekarang.innerHTML = new Date().getFullYear();
+    </script>
+  </body>
+</html>

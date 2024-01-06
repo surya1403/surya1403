@@ -1,0 +1,250 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbfbfb;
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  background-color: #87cefa;
+  display: fixed;
+}
+
+nav div {
+  width: 60%;
+}
+nav div ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav div ul li a {
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+
+nav div ul li a:hover {
+  color: orangered;
+  border-bottom: 1px solid orangered;
+}
+nav div ul li h1 {
+  color: rgb(108, 42, 42);
+  text-align: left;
+}
+
+.aboutme1 {
+  /* max-width: 450px; */
+  width: 50%;
+  /* height: 254px; */
+  margin: 50px;
+  padding: 40px;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+@media (min-width: 711px) and (max-width: 1050px) {
+  .container-aboutme p.aboutme1 {
+    width: 60%;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 710px) {
+  .container-aboutme p.aboutme1 {
+    width: 78%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav div {
+    width: 75%;
+  }
+
+  .container-aboutme p.aboutme1 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 410px) {
+  nav div {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 21px;
+  }
+  nav div ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-widh: 410px) {
+  nav div {
+    width: 13px;
+  }
+}
+
+.gambar {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gambar img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.gambar h1 {
+  font-family: "Roboto", sans-serif;
+}
+.container-aboutme p {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  width: 45%;
+  font-weight: bold;
+}
+.judul {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 60px;
+}
+.ppp {
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+}
+
+.container-aboutme {
+  display: flex;
+  justify-content: center;
+}
+.artikel .kotak1 {
+  /* width: 35%; */
+  /* padding: 5%; */
+  /* background-color: rgb(255, 248, 248); */
+  /* margin: 50px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* border-radius: 25px; */
+  /* boxshadow */
+  /* box-shadow: 10px 10px 30px; */
+  width: 290px;
+  padding: 4%;
+  margin: 50px;
+  height: 254px;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.artikel {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.kotak1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.kotak1 p {
+  text-align: center;
+}
+
+.kotak1 img {
+  width: 70%;
+  align-content: center;
+}
+.kontak {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kontak div {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  --clr-alpha: #9c9c9c60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+input {
+  width: 100px;
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  width: 25rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--clr-alpha);
+  outline: 2px solid var(--bg-dark);
+}
+input:focus {
+  outline: 2px solid black;
+}
+textarea {
+  width: 25rem;
+  background-color: var(--clr-alpha);
+  border-radius: 10px;
+}
+
+footer div {
+  text-align: center;
+  margin: 50px;
+}
+/* button custom */
+button.kirim {
+  margin: 20px;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button.kirim::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button.kirim:hover::before {
+  width: 9em;
+}
