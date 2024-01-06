@@ -14,9 +14,9 @@ nav {
   display: fixed;
 }
 
-nav div {
+/* nav div {
   width: 60%;
-}
+} */
 nav div ul {
   display: flex;
   gap: 2rem;
@@ -54,45 +54,64 @@ nav div ul li h1 {
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
-@media (min-width: 711px) and (max-width: 1050px) {
-  .container-aboutme p.aboutme1 {
-    width: 60%;
-  }
+/* humburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
 }
 
-@media (min-width: 501px) and (max-width: 710px) {
-  .container-aboutme p.aboutme1 {
-    width: 78%;
-  }
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -3px;
+  opacity: 0;
+  z-index: 5;
+  cursor: pointer;
 }
 
-@media (max-width: 500px) {
-  nav div {
-    width: 75%;
-  }
-
-  .container-aboutme p.aboutme1 {
-    width: 80%;
-  }
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 455ms;
+  transform: scale(1);
 }
 
-@media (max-width: 410px) {
-  nav div {
-    font-size: 13px;
-  }
-  h1 {
-    font-size: 21px;
-  }
-  nav div ul {
-    gap: 1rem;
-  }
+/* humberger menu animation */
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+  /* transform origin digunakan untuk mennetukan poros.
+  transform origin: sumbu(x) sumbu(y); */
 }
 
-@media (max-widh: 410px) {
-  nav div {
-    width: 13px;
-  }
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
 }
+
+.menu-toggle input#tricger-menu:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(0px, 1px);
+}
+
+.menu-toggle input#tricger-menu:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-3px, 0);
+}
+
+.menu-toggle input#tricger-menu:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* akhir dari navbar */
 
 .gambar {
   width: 100%;
@@ -247,4 +266,77 @@ button.kirim::before {
 
 button.kirim:hover::before {
   width: 9em;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  --stroke: #666;
+  --fill: #ffc73a;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@media (min-width: 711px) and (max-width: 1050px) {
+  .container-aboutme p.aboutme1 {
+    width: 60%;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 710px) {
+  .container-aboutme p.aboutme1 {
+    width: 78%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav div {
+    /* width: 75%; */
+  }
+
+  .container-aboutme p.aboutme1 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 410px) {
+  nav div {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 21px;
+  }
+  nav div ul {
+    gap: 1rem;
+  }
+}
+
+/* ukuran mobile */
+
+@media screen and (max-width: 576px) {
+  nav div {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
 }
